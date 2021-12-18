@@ -1,1 +1,2 @@
-# Mssql
+# Mssql 
+MSSQL DERSTE ALDIĞIM NOTLAR
