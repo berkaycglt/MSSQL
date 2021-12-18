@@ -1,0 +1,19 @@
+AS KOMUTU,ARİTMETİK İŞLEMLER
+
+AS KOMUTU=Takma alan adı kullanmak için kullanılır.İngilizcede gibi anlamına gelir.Kullanıcının arayüzünde değişiklik yapmak için kullanılır.Güncelleme işlemi felan değildir.Kalıcı bir değişiklik yapmaz.
+komutu:
+select sütunadı as 'takmaad' from tabloadı
+
+!!Eğer biz takma adı yeni bir ad olarak kullanmak istiyorsak "" içinde kullanmalıyız.
+!!İkili as kullanımı da vardır.
+select sutunadı as takmaad,sutunadı as takmaad from tabloadı
+select kitapad,kitapyazar,kitapfiyat,kitapfiyat+2 as 'yenifiyat' from kitap => bana tablomdan kitap adı,yazarı ve fiyatını görüntülücek buna ek olarak da kitap fiyatının 2 fazlasını takma ad olarak yeni fiyat şeklinde getiricek.
+
+!!KULLANICIYA SUNMA İŞLEMLERİNDE YENİ BİR ALAN GİBİ OLUŞTURURUZ AS KOMUTUYLA KALICI DEĞİŞİKLİK OLMAZ.
+
+!!NERDE İŞE YARAR:MESELA BÜTÜN KİTAPLARDA %20 İNDİRİME GİDEN BİR MAĞAZA OLDUĞUNU DÜŞÜNELİM BÜTÜN KİTAPLARIN FİYATINI %20 İNDİRİMLİ HALE GETİRİP İNDİRİM BİTİNCE TEKRAR ESKİ HALİNE DÖNDÜRMEK
+ ZOR OLUCAKTIR.BUNUN İÇİN YENİ BİR SORGU YAPIP TAKMA ADLA YENİ FİYAT OLUŞTURUP BUNU KULLANICIYA SUNABİLİRİZ.KALICI BİR DEĞİŞİKLİK YAPMAMIZA GEREK KALMAZ.
+
+DERSTTE YAZDIĞIM KODLAR:
+
+ select kitap_adi,kitap_fiyat,kitap_fiyat+2 as 'yeni fiyat' from kitaplik

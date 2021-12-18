@@ -1,0 +1,48 @@
+SAYISAL FONKSİYONLAR
+
+ABS FONKSİYONU:
+Mutlak değeri alma fonskiyonudur.
+select abs (sütun adı) from tablo adı şeklinde kullanılır.=>ilgili sütunun mutlak değerini döndürür.
+
+YUVARLAMA FONSKİYONLARI:
+ceiling=üste yuvarlama fonksiyonudur.
+select ceiling(sütun adı)from tablo adı
+floor=alta yuvarlama fonksiyonudur.
+select floor(sütun adı) from tablo adı
+round=virgülden sonra kaç basmağı getirmek istediğimizi sağlayan fonksiyondur iki parametre alır.ikincci parametre kaç basamak getiriliceği ile ilgilidir.
+select round(sütun adı,kaç basamak getiriliceği) from tablo adı
+
+ÜST ALMA FONSKİYONU:
+power=üs alma fonksiyonudur.iki parametre alır.birinci parametre alt kısım ikinci parametre üst kısmıdır.
+select power(2,5)=>2'nin 5. kuvveti
+
+KAREKÖK ALMA FONKSİYONU:
+sqrt=karekök almak için kullanılan fonksiyondur.tek parametre alır.
+select sqrt(değer) from tabloadı
+
+!!TOPLAMA FONSKİYONU:
+En önemli konu başlığıdır.Tabloları ilişkilendirdiğimizde kullanıcağız.
+sum:toplama fonksiyonudur.ingilizcede karşılığı toplamdır.
+select sum(alan adı) from tablo adı=>yazılan alan adındaki değerleri toplar.
+
+!!!ORTALAMA FONKSİYONU:
+avg=ortalamayı bulur.Sütunu toplayıp satır sayısını böler.
+select avg(sütun adı) from tablo adı
+
+!!MAX VE MİN DEĞER BULMA FONKSİYONU:
+max fonksiyomu:max değeri bulan fonksiyondur
+select max(sütun adı) from  tabloadı
+min fonksiyonu:min değeri bulan fonksiyondur.
+select min(sütun adı)from tablo adı
+
+!!COUNT FONSKİYONU:
+sayac anlamına gelir.tablo içerisinde istediğiz alanda kaç tane değer olduğunu bize döndürür.mesela kaç tane kitap olduğunu bulalım:
+select count(kitap_Adi)from kitaplik
+
+DERSTTE YAZDIĞIM KODLAR:
+select * from kitaplik
+alter table kitaplik alter column kitap_fiyat float
+insert into kitaplik (kitap_fiyat) values (5,25)
+select sum(kitap_fiyat) as 'toplam sermaye',sum(kitap_no) as'toplam' from kitaplik
+select sum(kitap_fiyat) from kitaplik where kitap_fiyat>40   
+select count(kitap_adi) as 'kayıt sayısı' from kitaplik

@@ -1,0 +1,23 @@
+GENEL TEKRAR 3 DML KOMUTLARI:
+
+!!İnsert into içerisine dahil et anlamına gelir.Yeni sıfırdan bir kayıt eklemek için kullanılır.Eklenen kayıda bir şey yapamaz.
+insert into tabloadı values (değerler)
+sadece istediğimiz alanlara da ekleme yapabiliriz.
+insert into tabloadı (alan adları) values (değerler)
+
+!!order by sıralama işlemlerinde kullanılır
+select * from tabloadı order by sütunadı
+
+!!update güncelleme işlemleri için kullanılır.Veri güncellemek için kullanılır.Var olan bir kayıt üzerinde yapar.Hangi kayıtı güncelliceğimizi belirtmek için de where ifadesiyle kullanılır.
+update tabloadı set sütunadı='yeni değer',sütunadı='yeni değer' where şart => burda where kullanmamızın nedeni hangi kayıtı güncelliceğimi belirtmek içindir where ifadesinden sonra gelen şart belirleyici olmalıdır. 
+set=değiştir anlamına gelir updatin syntaxında kullanılır.
+
+!!delete komutu veri silmek için kullanılır.Bunda da hangi kayıtı siliceğimizi belirtmek için where ifadesiyle belirleyici bir şart belirtmemiz lazım.
+delete from tabloadı where şart
+delete from kitaplik where kitap_adi='kaşağı'
+tablo içerisindeki bütün kayıtları silmek istersek truncate komutunu kullanabiliriz.
+truncate table tabloadı
+
+Derste yazdığım kodlar:
+update kitaplik set kitap_yayinevi='berkay',kitap_basimyili=2019-10-12 where kitap_no=7
+delete from kitaplik where kitap_adi='ahmet'

@@ -1,0 +1,13 @@
+GROUP BY 2
+select kişi_meslek,count(kişi_ad) as 'personel sayısı' from kişiler group by kişi_meslek order by [personel sayısı] desc => bir meslekte kaç kişi var bunu bulduk ve order by ile sıraladık.
+select kişi_şehir,count(kişi_ad) as 'şehir nüfusu' from kişiler group by kişi_şehir order by [şehir nüfusu] => şehirdeki mesleklerin çalışan sayılarını bulduk.
+
+!!order by ifadesini burda öylesine kullanıyoruz zorunlu değiliz.,
+
+select kişi_meslek,count(kişi_ad) as 'personel sayısı',sum(kişi_maaş) as'toplam maaş' from kişiler group by kişi_meslek
+
+!!group by da kodu terstten okumalıyız.count(kişi_ad) dediğimizde mesela neye göre biz kişilerin adını sayacağız.group by bunu önler.buna cevap verir.
+
+select kişi_meslek,count(kişi_ad) as 'personel sayısı',sum(kişi_maaş) as'toplam maaş',avg(kişi_maaş) as 'ortalama maaş' from kişiler group by kişi_meslek =>kişileri mesleğine göre gruplandırıp sorgumuzu yazdık.
+select kişi_şehir,max(kişi_maaş) as 'en çok kazanan',min(kişi_maaş) as 'en az kazananı' from kişiler group by kişi_şehir order by kişi_şehir=>kişileri şehire göre gruplandırdık ve en çok kazananın maaşını ve en az kazananın
+                                                                                                                                                                                                                        maaşını kişilerin şehirlerine göre yazdırdık. 

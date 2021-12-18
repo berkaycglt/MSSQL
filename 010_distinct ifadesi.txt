@@ -1,0 +1,10 @@
+DİSTİNCT İFADESİ:
+
+Distinct ifadesi=Tekrarlı kayıtları önlemek için kullanılır.Diyelimki bir kaydı iki defa ekledik distinct ifadesi kullanırsak o kaydı bir defa getirir.Farklı olanları anlamına gelir.Alfabetik sıraya göre dizer.
+komutu:
+select distinct sütunadı from tabloadı (seç farklı olanları tanlo adımdan)
+
+Derstte yazdığım kodlar:
+
+ select distinct kitap_yazari from kitaplik
+ select distinct kitap_fiyat from kitaplik

@@ -1,0 +1,10 @@
+HAVİNG KULLANIMI
+Gruplandırma işlemlerinin son kısmıdır.Bir fonksiyonda dönen değere göre koşul yazılmak istenirse kullanılır.Gruplandırmadan dönen değere bir koşuk eklemek istersek having kullanmalıyız.
+Sorgunun sonunda group bydan da sonra kullanılır.Group by işlemlerinde wherin yerine geçer diye de düşünebiliriz.Group by da where kullanılmaz sorgu sonucunda having kullanılır.	
+
+!!select kişi_meslek,
+      sum(kişi_maaş) as 'toplam maaş',
+      sum(gider) as 'toplam gider' 
+	  sum(sum(kişi_maaş)-sum(gider)) as 'net bakiye'  (net bakiyeyi belirledik)
+	  from kişiler group by kişi_meslek having(sum(kitap_fiyat)-sum(gider))>50 =>çıkan sonucu şarta bağladık.
+ group by ifadesiyle bu şekilde gruplandırarak sonuçlar elde ediyoduk şimdi bu sonuçlarla ilgili   bir şart yazmak için having kullanıcaz.mesela bu sorguyu yaptıktan sonra net bakiyesi 1000 tl olanları listelemek istersek.

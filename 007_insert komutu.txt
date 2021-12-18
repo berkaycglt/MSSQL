@@ -1,0 +1,19 @@
+İNSERT KOMUTU
+
+İNSERT KOMUTU=Veri kaydetmek anlamına gelir.İçine ekle içine dahil et anlamına gelir.Yeni kayıt eklemek için kullanılır.Olmayan bir satıra kayıt yapar yani
+              yeni bir kayıt işlemi gerçekleştirir.İnsert komutuyla var olan bir satıra veri ekleme işlemi yapamayız.Bunu update komutuyla yapacağız.
+
+kullanımı:insert into tablo adı values(veriler)
+
+!!Biz insertle yeni veriler eklerken tabloda olan her sütuna veri eklemek zorunda değiliz ancak bunun ayrı kullanımı vardır.
+kullanımı:insert into tablo adı (alanlar) values (değerler) buradaki alanlar kısmı veri ekliceğimiz sütun isimleridir.Alan adı sırasıyla veri sırası birbirine uymalıdır.
+
+İnsert ve update komutlarının farkı:İnsert hiç olmayan bir satıra kayıt girişi yapar.update de var olan satır üzerinde değişikliğe gidilir.
+
+Derstte yazdığım kodlar: 
+ 
+ insert into kitaplik values ('bozkurtlar','hüseyin nihal atsız','meb','2016-10-10',6,85)
+ select * from kitaplik
+ insert into kitaplik (kitap_adi,kitap_fiyat,kitap_no) values ('berkay',50,7)
+ select * from kitaplik
+	

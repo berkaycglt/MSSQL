@@ -1,0 +1,25 @@
+DROP VE TRUNCATE KOMUTU
+
+--DROP=İstediğimiz tabloyu veya sütunu silmek için kullanıcağımız komuttur.
+1-Tabloyu silmek:
+  drop table tablo adı komutuyla gerçekleştirilir.(Sil tabloyu tablonun ismi şeklinde okunur)
+2-Sütunu silmek:
+  burada tablonun içinde değişiklik yapıp sütunu siliceğiz bunun için de alter komutunu kullanıcağız.
+  alter table tablo adı drop column sütun ismi(değiştir tabloyu sil o isimli sütunu şeklinde okunur.)
+
+!!Biz oluşturulmuş bir tabloda güncelleme yapmak için alterı kullanıyorduk.Değişitirmek,silmek,eklemek bir güncelleme işlemidir.
+
+
+--Truncate=Tablo içerisindeki kayıtları siler.Tablonun içeriğini siler.Tablonun veya sütunun içini boşaltır.
+  truncate table tablo adı(yazılan tablonun içini boşaltır).
+
+Derstte yazdığım kodlar:
+
+ create table hastalar(hasta_id int,hasta_isim varchar(20),hasta_tc char(11),)
+ alter table hastalar add hasta_soyad varchar(20)
+ create table hastalar2(hasta_id int,hasta_bilgisi nvarchar(20)) 
+ drop table hastalar2 
+ alter table hastalar alter column hasta_soyad int
+ alter table hastalar drop column hasta_soyad
+ alter table hastalar add hasta_soyad nvarchar(20)
+  

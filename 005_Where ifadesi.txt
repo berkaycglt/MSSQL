@@ -1,0 +1,18 @@
+WHERE İFADESİ:
+--Koşullu ifadelerde kullanılır.Selecte veya update de koşul bildirmek istersek where'i kullanmalıyız.
+--Select ifadesiyle listelediğimiz verilerde bazı kısıtlamalara gitmek isteyebiliriz.örneğin kütüphane veritabanındaki kitaplık tablomuzda
+reşat nuri güntekine ait olan kitapları görüntülemek istiyoruz veya sayfa sayısı 50'den fazla olan kitapları görmek istiyoruz vs. buralarda kullanılır.
+
+kullanımı:
+select * from tablo adı where şart (verilen tablo adındaki bütün kayıtlar üzerinde arama yap ve verilen şarta uygun olanı getir)
+select * from kitaplık where kitap_adi='palto' (kitaplık tablomdan kitap adı palto olan kayıtları bana getir bana getir.)
+
+!!yani where buradaki şartı sağlayan yapıdır.
+!!getirme,seçme işlemi olduğundan selecti kullanırız.Bütün tablo içinde arama yapıcağımzdan * ı kullanırız.
+
+
+Derstte yazdığımız kodlar:  
+
+ select * from kitaplik where kitap_adi='suskunlar'
+ select * from kitaplik where kitap_no>2
+ select * from kitaplik where kitap_fiyat=30

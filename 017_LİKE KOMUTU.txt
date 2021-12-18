@@ -1,0 +1,12 @@
+LİKE KOMUTU:
+
+LİKE KOMUTU:İngilizcede gibi anlamına gelir.Selectle kullanıldığında şunun gibi olanı getir anlamı katar.
+select * from tabloadı where sütun adı like 'kısıtlama durumu'
+select * from kitaplik where kitapad like 'a%b'=adı a harfiyle başlayan b harfiyle biten kitapları getir.
+select * from kitaplik where kitapadı like '[a-g%]'=>adı a hariyle g harfi arasında başlayan kayıtları bana getir
+
+JOKER KARAKTERLER:
+[]=Veya anlamı taşır:like '[ab]%'=>adı a veya b ile başlayan karakterler anlamına gelir.
+
+!! _=karakter belirtir.
+   %=belirsizlik belirtir.

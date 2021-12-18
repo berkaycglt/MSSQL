@@ -1,0 +1,15 @@
+TARİH FONKSİYONLARI
+ Tarihlere kısıtlamalar getiriceğimiz konularda kullanılır.
+
+GETDATE FONKSİYONU:
+Tarih getir anlamına gelir.
+select getdate() =>anlık tarihi seç anlamına gelir.
+
+DATE PART FONKSİYONU:
+Tarih bölümü anlamına gelir.Tarihi bölümlere ayırarak getirmek için kullanılır.İki parametre alır.Birinci parametre seçilecek olan tarih kısmı ikinci parametre ise tarihtir.
+select datepart(YEAR,GETDATE())=>şuandki tarihin yılını getirir.
+select datepart(month,getdate())
+select datepart(day,'2019-12-11')=>bu tarihin gününü getirir.
+select * from kitaplik where datepart(year,kitap_tarihi)='2016'	 =>burada kitap tarihi 2016 olan kayıtları getir dedik.
+
+!!ay,yıl,gün,hafta,çeyrek sorgulaını yapabiliriz.

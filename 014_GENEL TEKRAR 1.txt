@@ -1,0 +1,57 @@
+GENEL TEKRAR DDL KOMUTLARI
+
+Birincil anahtar(primart key)	:birden fazla tablo kullanıldığız zaman bir alanda yapılan değişiklerin diğer alanda da değişmesini istiyorsak bu gibi durumlarda kullanılması gerekn sql ifadesidir.
+
+!!not null= boş geçilez anlamına gelir
+ogr no int not null
+
+!!default komutu varsayılan anlamına gelir.Değişken tanımlamada şu şekilde kullanılabilir:
+ogrilce varchar(20) default 'seyhan' =>burada ilçe değeri varsayılan olarak seyhan yapıldı ancak başka değer girilirse değişebilir.
+
+!!CHECK İN KAVRAMI=Kontrol kavramıdır.Mesela sınav notu 0-100 aralığında olmalıdır gibi.
+ogrsinav1 tinyint check(ogrsinav1>0)=>burda checkla şart sağladık ogrsinav1 notunun 0 dan büyük olması lazım.
+
+!!CONTSRAİNT İFADESİ:Kısıtlamalarda kullanılır.Kısıtlatıcı demektir.
+constraint chks2 check (ogesinav2>=0 and ogrsinav2<=100) => burada constraint yapısıyla bir kısıtlama koyduk sınav2 değerine.chks2 kısıtlamanın adıdır.Biz oluştururuz.
+constraint-constraint adı-check-(kısıtlama)
+constraint chkkol check (ogrkol in ('sağlık','spor','müzik')) => burada bir kısıtlmama koyduk ogrkol sağlık spor vya müzikden başkası seçilemez.
+
+!!Alter komutuyla check(kısıtlama) yapma:
+alter table tabloadı add check (şart)
+alter table ogrenci add check (devamsızlık<20) => burada önceden eklemiş olduğumuz bir sutuna alter komutunu kullanara kısıtlama ekledik.
+
+!!Alter komutuyla:
+1-sütun ekleme
+2-sütun veri tipini değiştirme
+3-sütun silme
+4-sütuna constraint ekleme gibi şeyleri yapabiliriz.Yapılan herşey tabloyla alakalıdır.Tablo güncellemeyle alakalıdır.
+
+!!Drop komutuyla:
+1-tabloyu silmek
+2-tablodaki sütunu silme işlemleri yapılabilir. =>bu işlem güncellemeye girer ve alter komutuyla yapılır.
+
+!!Truncate komutuyla:
+1-tablo içindeki kayıtları silebiliriz.
+
+YAZDIĞIM KODLAR:
+
+
+create table ogrenci(
+ogrno int not null primary key,
+ogradi varchar(15),
+ogrsoyadi varchar(15),
+ogradres varchar(50),
+ogrsinif varchar(2),
+ogrilce varchar(20) default 'seyhan',
+ogrsinav1 tinyint check (ogrsinav1>0),
+ogrsinav2 int,
+constraint chks2 check (ogrsinav2<=100 and ogrsinav2>=0)
+)
+select * from ogrenci
+alter table ogrenci add ogrveli varchar(20)
+alter table ogrenci alter column ogradi varchar(20)
+alter table ogrenci add ogrdevamsizlik tinyint
+alter table ogrenci add check (ogrdevamsizik<20)
+select * from ogrenci
+alter table ogrenci drop column ogrveli
+truncate table ogrenci

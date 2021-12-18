@@ -1,0 +1,29 @@
+OPERATÖRLER
+
+1-And=ve anlamına gelir.
+2-or=veya anlamına gelir
+3-in=in parantez içinde bulunan alanları sağlıyorsa çalışır.Sadece parantez içerisinde bulunan değerlerin karşılığı olan verileri getirir.
+kullanımı:select * from tabloadı where sütun adı in (değerler)
+4-like=şu gibi olan anlamına gelir mesela kitap adının içinde a kelimesi bulunuyorsa.
+kullanımı:select * from kitaplik where like '%a%'
+
+!Geldikleri anlam diğer programlama dillerindekiyle aynıdır.Bir kodda birden çok and,or kullanılabilir.
+
+!! Bu üç komutu aynı kodda kullanabiliriz.
+
+!!'%a%'=içinde a harfi bulunuyorsa
+  'a%'=a harfiyle başlıyorsa                             bunlar like komutuyla kullanılır.
+
+!!SELECT İFADESİNE BİR ŞART EKLEMEK İSTİYORSAK WHERE'İ KULLANMALIYIZ.
+
+!!LİKE VE İNİN KULLANIMI:
+SELECT * FROM TABLO ADI WHERE SÜTUN İSMİ LİKE ''
+SELECT * FROM TABLO ADI WHERE SÜTUN İSMİ İN(DEĞERLER)
+
+Derstte yazdığım kodlar:
+
+ select * from kitaplik where kitap_yazari='meb' and kitap_adi='suskunlar'
+ select * from kitaplik where kitap_yazari='meb' or kitap_adi='suskunlar'
+ select * from kitaplik where kitap_fiyat in(20,30,40) and kitap_adi='tom jerry'
+ select * from kitaplik where kitap_adi like '%a%' or kitap_yayinevi like '%e%' 
+ select * from kitaplik where ktap_fiyati in (40,50) and kitap_fiyati like 'a&' 

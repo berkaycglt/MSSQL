@@ -1,0 +1,44 @@
+CREATE KOMUTU
+
+--translate komutları diye geçer.
+--Tablo ve veritabanları oluşturmak için kullanılır.
+--Translate komutları üçe ayrılır:
+
+1-DML KOMUTLARI
+2-DDL KOMUTLARI
+3-DCL KOMUTLARI
+
+1-DML KOMUTLARI(DATA MANIPULATION LANGUAGE)-SQL VERİ İŞLEME DİLİ:
+-SELECT:VERİ SEÇMEK
+-DELETE:VERİ SİLMEK
+-UPDATE:VERİ GÜNCELLEMEK
+-İNSERT:VERİ KAYDETMEK
+
+2-DDL KOMUTLARI(DATA DEFİNATION LANGUAGE)-SQL VERİ TANIMALAMA DİLİ:
+-CREATE TABLE:TABLO OLUŞTURMAK
+-ALTER TABLE:TABLODA GÜNCELLEME YAPMAK
+-DROP TABLE:TABLOYU SİLMEK
+
+3-DCL KOMUTLARI(DATTA CONTROL LANGUAGE)-SQL VERİ KONTROL DİLİ:
+-GRANT
+-DENNY
+-REVOKE 
+
+CREATE KOMUTU:
+--İlk olarak yeni bir sorgu(querry) oluşturacağız.
+--Sonra bir veri tabanı oluşturucağız bu veritabanında bir tablo oluşturup belirli alanlar getiriceğiz.
+KODU:
+
+database oluşturmak:
+
+create database okul şeklinde yeni bir veritabanı oluşturabiliriz.
+bu veri tabanını başka bir sorguda kullanmak istersek use okul komutuyla kullanırız.
+
+tablo oluşturmak:
+
+create table ogr(
+ buraya tablonun alanlarını gireriz.)
+örn:create table ogr(Ogrenci_Ad varchar(15),
+                     Ogrenci_yas int,
+                     Ogrenci_okul varchar(20,
+                     Ogr_Tc char(11) )

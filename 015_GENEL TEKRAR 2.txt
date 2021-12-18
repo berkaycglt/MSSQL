@@ -1,0 +1,18 @@
+GENEL TEKRAR 2 DML KOMUTLARI:
+
+!! select ifadesi veri getirmek,veri seçmek için kullanılır * kullanırsak bütün satırı getirir ancak biz bunu where ile belirli şartlara göre getirebliriz.Ayrıca select ifadesiyle getirmek istediğimiz alanları yazarak o alanları da getirebirizi.
+!!iki farklı tablodan farklı alanları getirme işlemini de yapabiliriz.mesela 2. tablodan kitap adını 3. tablodan kitap rengini almak istersek:
+  select kitap2.kitapadı,kitap3.kitaprengi from kitap2,kitap3 => fromdan sonra tablo adlarını sırasıyla yazmalıyız.Farklı iki tablodan farklı alanlar getirdik.
+!!where kullanımı:
+select * from kitaplik where (şart) =>where şartlı ifadelerde kullanılır.
+select * from kitaplik where (şart) and,or,like,in (şart) =>bu şekilde de kullanabiliriz sınırsız şart koyabiliriz.
+select * from kitaplik where kitapadi like '%beyaz%' =>burda kitap adı içerisinde beyaz geçenleri getir dedik like benzer anlamına gelir.
+select * from kitaplik where kitapadi like 'k____' => burda baş harfi k ile başlayıp 4 karakterden oluşana benzer olanı getir dedik her bir al tre bir karakter anlamına gelir.
+!! in ifadesi de şartla kullanılan bir yapıdır içeren anlamına gelir.
+select * from kitaplik where kitap_adi in('yıldız','güneş') =>burada kitap adının içinde yıldız ve güneş olan bir kitap var mı diye bakar ve varsa getirir.
+
+Derstte yazdığım kodlar:
+use kütüphane
+select * from kitaplik   
+select * from kitaplik where kitap_adi like '%b%'
+select * from kitaplik where kitap_yazari like '%m%'

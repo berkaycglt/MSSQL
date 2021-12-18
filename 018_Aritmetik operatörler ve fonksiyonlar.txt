@@ -1,0 +1,84 @@
+ARİTMETİK OPERATÖRLER VE FONSİYONLAR
+
+Aritmetik opartörleri nasıl kullanıcağız:
+ select diyicez select dedikten sonra aritmetik işlemimizi yapıcağız sonra istersek buna takma sütun adı verip sorgu sonucunu görebiliriz.
+select 20+4 =>direkt sütun ismi olmadan bize sonucu döndürür.
+select 20+4 as 'toplam'=>sütun adını toplam yaprak bize sonucu döndürür.
+select 20+4 as 'toplam',20-4 as 'fark' => aynı toplada gösterir.
+
+FONKSİYONLAR:
+BİRLEŞTİRME İŞLEMİ:
+select sütun adı + '-'+sütunadı from tabloadı
+select kitapadı + '-'+ kitapyazarı as 'kitaplık' from kitaplık =>burada kitap adını ve kitap yazarını birleştirip süryn adını da kitaplık yaptık
+
+SUBSTRİNG FONKSİYONU:
+3 tane parametresi vardır.Bir kayıtta istenilen karakterden başlayıp istenilen karaktere kadar olan değerleri döndürür.Mesela kitap adının ilk 5 karakterini getirmek istiyoruz:
+1.parametre=sütun ismi
+2.parametre=başlangıç karakteri
+3.parametre kaça kadar gidiceğini belirtir.
+select substring(kitap_Adi,1,5) from kitaplik =>kitap adı sütunundaki kayıtları 1. karakterden 5. karakterine kadar getir.
+!!bir kodda birden çok substring kullanabiliriz.
+select substring(kitap_adi,1,4),substring(kitap_yazari,1,4)from kitaplik
+
+LEFT FONKSİYONU:
+Sol taraftan kaç karakter getiriliceğini belirtir.Substringle aynı görevi yapar.İlk karakterden itibaren kayıt alır.
+select left(sütunadı,kaç karakter getirilceği) from tabloadı
+select left(kitap_Adi,7) from kitaplik > kitap adında sol taraftan 7 karakter getir anlamına gelir.
+
+RİGHT FONKSİYONU:
+Sağ taraftan kayıt alır.Son karakterden kayıt almaya başlar.
+select right(sütunadı,kaç karakter getirileceği)
+select right(kitap_adi,7) from tabloadı=>kitap adından sağ taraftan 7 karakter getirir.
+!!BOŞLUĞU DA KARAKTER SAYARLAR.
+
+UPPER FONKSİYONU:
+Kayıtları büyük harfe çeviren fonksiyondur.
+select upper(sütunad) from tabloadı=>kitap adı içindeki bütün kayıtlarımı büyük harfe çevirir.Getirirken ana konsola sütun ismi bilinmez as ile sütuna isim verebiliriz.
+
+LOWER FONKSİYONU:
+Kayıtları küçük harfe çeviren fonksiyondur.
+select lower(sütunadı) from tabloadı=>kayıtlarımı küçük harfe çevirir.
+
+!! select upper (kitapadi) as 'büyük harf' ,lower(kitapyazari) as 'kücük harf' from kitaplik => bu şekilde çoklu da kullanabiliriz.as ile sütun isimleri de verebiliriz.
+
+LEN FONKSİYONU:
+Karakter sayısını bulmamızı sağlar.
+select len(sütunadı) from tabloadı
+select kitapadi,len(kitapadi) as 'harf sayısı' =>kitap adı sütununu ve 
+kitap adlarının uzunluğunu yazdırır harf sayısı sütununun altında
+
+!!BU KOMUTLARI WHERE İLE ŞARTTA DA KULLANABİLİRİZ.
+
+REPLACE FONKSİYONU:
+Tablonun ilgili satırı üzerinde değişiklik yapmak için kullanılır.Bu fonksiyon tabloda girili olan herhangi bir kayıtı değişitirmek için kullanılır.3 tane parametresi vardır
+1.parametre=değiştirilcek sütunun ismi
+2.parametre=değiştirilcek sütun içerisinde değiştirilcek kaydın ismi
+3.parametre=yeni değer
+select replace(sütunadı,eski değer,yeni değer) from tabloadı
+select replace(kitap_yazari,'meb','hüseyin nihal') from kitaplik
+
+!!update komutundaki güncelleme işlemi gibidir.ancak update işlemi gibi kalıcı bir değişikil yapmaz sadece arayüzde gösterir ve biter.
+
+!!BU FONKSİYONLAR TABLODA KALICI BİR DEĞİŞİKLİK YAPMAZLAR SADECE ARAYÜZDE GÖSTERİRLER.
+
+REVERSE FONKSİYONU:
+kayıtları terstten yazdırır.
+select reverse(sütunadı) from tablo adı
+
+DERSTTE YAZDIĞIM KODLAR:
+
+ select replace(kitap_adi,'tom jerry','mahmut abi') as 'yeni ad' from kitaplik
+ select * from kitaplik
+ select reverse (kitap_adi)from kitaplik
+ select kitap_adi,len(kitap_adi) as 'uzunluk' from kitaplik
+ select lower(kitap_adi)as 'küçük harf',upper(kitap_adi) as 'büyük harf'from kitaplik
+ select right(kitap_adi,2) as 'sağdan 2',left (kitap_adi,2) as 'soldan 2' from kitaplik
+ select * from kitaplik
+ select kitap_adi+ '-' +kitap_yazari as 'kitap yazarı ve kitap adı' from kitaplik
+
+
+
+
+
+
+

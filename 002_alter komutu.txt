@@ -1,0 +1,42 @@
+ALTER KOMUTU
+
+--Tablomuza yeni alan eklemek istersek yeni alan ekleme işlemi create ile yapılmaz alter ile yapılır.
+--Elimizdeki tablonun güncelleme işlemini gerçekleştririr.
+
+Kullanımı:
+
+--alter table ogr add notlar int (güncelle ogr tablosunu ekle notlar adında kısım)
+
+önce alter-sonra tablo ve ismi-sonra değişken adı ve türü
+
+---bir satırda birden fazla kısım da ekleyebiliriz:
+   alter table ogr add Baslama_tarihi samlldatetime,Ogr_yas tinyint 
+
+Değiştirme işlemi de yapabiliriz alterla:
+
+
+--mesela sütunun türünü değiştirmek:
+column=sütun demektir
+alter table ogr alter column notlar smallint (ogr tablosundaki notlar sütununun tipini değiştir anlamına gelir.)
+
+tablodaki birşeyi değiştirmek istiyorsak tabloyla konuşmalıyız mesela
+
+alter table ogr => ogrenci tablosunda güncelleme yapıcağımızı söyledik sonrasında
+
+alter=değiştirmek  add=eklemek
+
+alter column Ogr_ad int => sonrasında sütunda değiştirme işlemi yapmak istediğimi söyledim.
+
+alter table ogr alter column Ogr_ad int
+
+KODLAR:
+use okul
+create table ogr(
+Ogr_ad varchar(20),
+Ogr_soyad varchar(20),
+Ogr_tc char(11),
+Ogr_no int,) 
+alter table ogr add notlar int
+alter table ogr add sinif tinyint
+alter table ogr alter column Ogr_no smallint
+alter table ogr alter column notlar smallint

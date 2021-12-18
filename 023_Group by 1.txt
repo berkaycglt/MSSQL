@@ -1,0 +1,19 @@
+GROUP BY 1
+gruplandırma işlemleri diye geçer.sql de bazen kullanıcağım sorgularda bir takım alanları beraber getirmemiz gerekebilir veya bazı sınırlamalar koymamız gerekebilir.mesela kitap yazarı reşat nuri güntekin olan kitapların toplam 
+fiyatını getirmek istediğimizde group by kullanmalıyız.bir sorgu yaparken o sorgunun içine fonksiyon dahil ettiğimiz zaman gruplandırma işlemlerine başvurucağız.SQL kümeleme fonksiyonlarını anlatmıştık.
+Çünkü kümeleme fonksiyonları genelde GROUP BY ifadesi ile birlikte kullanılır. Adından da anlaşılacağı üzere GROUP BY ifadesi gruplama yapar. Yani sonuç kümesini bir veya birden fazla kolona göre gruplar.
+
+select kitap_yazar,count(kitap_ad) as 'kitap sayısı' from kitaplık group by kitap_yazar =>burada kitap yazarlarının kaç tane kitabının olduğunu yazdırdık ve bunun sütun ismine takma ad olarak kitap sayısı dedik bu
+                                                                                                                                          gruplandırma işlemini kitap yazarına göre ayarladık.
+
+!!fonksiyonları sütun isimleriyle kullandığımda group by ifadesini kullanmalıyım.
+select kitap_adı,count(kitap_Adı) from kitaplık group by kitap_Adı =>burada aynı kitap adında kaç tane kitabımız var bunu getirdik.
+select kitap_yayınevi,count(kitap_Adı) as 'kitap sayısı' from kitaplık group by kitap_yayınevi
+select kitap_yayinevi,sum(kitap_fiyat) as 'toplam sermaye' from kitaplik group by kitap_yayinevi order by [toplam sermaye] desc =>burada kitap yayınevinin toplam sermayesini bulup  order by ile çoktan aza sıraladık.
+
+!!gruplandırma işleminin mantığı şöyledir.biz mesela bir sütun ismi getirdik ve yanında herhangi bir fonksiyonla bir değer degetirdik bu değeri neye göre yazıcak bunu bilemeyiz bu yüzden group by ifadesiyle gruplandırırız.
+
+select kitap_yayinevi,avg(kitap_fiyat) as 'toplam sermaye' from kitaplik group by kitap_yayinevi =>yayınevlerinin ortalama kitap fiyatlarını bulduk.
+select kitap_yayinevi, max(kitap_fiyat) as 'en büyük',min(kitap_fiyat) as 'en düşük' from kitaplik group by kitap_yayinevi=>kitap yayınevindeki en büyük ve en küçük fiyatlı kitapları bulduk.
+select kitap_yayinevi,count(kitap_adi) from kitaplik where kitap_fiyat>30 group by kitap_yayinevi => burada bir yayın evinde kitap fiyatı 30 fan büyük olanların sayısını getirdik.
+                                                                                                                                                              burada kitap fiyatının 30 da büyük olanların kitap adını say ve kitap yayınevine göre gruplandır dedik.

@@ -1,0 +1,21 @@
+ORDER BY KULLANIMI:
+
+Order by =Sıralama işlemlerinde kullanılır.Şurdaki değeri sırala anlamına gelir.
+kullanımı:
+select * from tabloadı order by sütın adı =tablodaki belirtilen sütun adına göre sıralama yapar.(Küçükten büyüğe veya alfabetik sıraya göre)
+
+!!Sıralama işlemini default şeklinde küçükten büyüğe yani yükselene doğru yapar.(asc)
+ascending=>artan sıralama yapar.
+select * from tabloadı order by sütın adı asc
+descending=>azalan sıralama yapar
+select * from tabloadı order by sütın adı desc
+
+!!Birden fazla alana göre sıralama yapılabilir.
+select * from tabloadı order by sütunadı,sütunadı desc
+select * from kitaplik order by kitap_yazari,kitap_no desc =>Burada olduğu gibi ikili sırlama yapar kitap yazarını alfabetik aynı kitap yazarına bağlı olan kitapları ise desc sıralar.Çünü default kısmı yani ilk kısım asc'dir.
+
+Derstte yazdığımız kodlar:
+
+ select * from  kitaplik order by kitap_adi
+ select * from kitaplik order by kitap_fiyat desc
+ select * from kitaplik order by kitap_yazari,kitap_no desc

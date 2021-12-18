@@ -1,0 +1,11 @@
+DATEDİFF &DATEADD FONKSİYONLARI
+
+DATEDİFF FONKSİYONU:
+İki tarih arasında istenilen formatta farkı döndürür.mesle gün,ay veya yıl olarak hangi formatta istersek.3 parametre alır.1.parametre tarih formatıdır gün mü ay mı yıl mı farkını istiyoruz bunu yazarız.
+ikinci parametre küçük tari üçüncü parametre ise büyük tarihtir.
+select datediff(year,'1923-10-29','2016-11-29')
+
+DATEADD FONKSİYONU:
+İstenilen tarih formatına istenilen şekilde zaman eklemek için kullanılır.mesela bugünün üzerine 10 gün daha ekleyelim.3 parametre alır.birinci parametre tarih bölümü ikinci parametre eklenicek tamsayı değeri
+üçünvü parametre nereye eklenicekse o tarih 
+select dateadd(month,10, getdate())=>bugünün üzerine 10 ay ekledik.

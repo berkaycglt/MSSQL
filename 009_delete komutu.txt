@@ -1,0 +1,13 @@
+DELETE KOMUTU
+ 
+DELETE KOMUTU:Veri Silmek için kullanılır.
+komutu:
+delete from tabloadı=Bütün tablonun içindeki verileri siler.
+delete from tabloadı where şart=şarta uygun olanı siler.
+
+!!Deletede de where ifadesi kullanırız çünkü siliceğimiz kaydı göstermek için bunu şart gibi görürüz.
+
+Derstte yazdığımız Kodlar:
+
+ delete from kitaplik where kitap_no=60
+ delete from kitaplik where kitap_fiyat<5

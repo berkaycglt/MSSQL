@@ -1,0 +1,14 @@
+TARİH SORGULARI-BETWEEN KULLANIMI
+!!Order by komutunu şu şekilde de kullanabiliriz.
+select * from kitaplık where kitap_fiyati<20 or  order by kitap_no desc =>burada belirli şarttaki verileri çağırdık ve kitap nosunu büyükten küçüğe olacak şekilde sıraladık.
+between=arasındaki anlamına gelir.
+10-20 arasındaki kitap fiyatlarını getir derken and ile:select * from kitaplik where kitap_fiyatı>10 and kitap_fiyati<20
+10-20 arasındaki kitap fiyatlarını getir derken between ile:select * from kitaplik where kitap_fiyati between 10 and 20 (10 ve 20 dahildir.)
+select * from tablo adı-where-sutun adı-between-değerler
+
+!!BU KOMUTLAR HEM EKRANA VERİ GETİRMEKLE VE ŞART İÇERDİĞİ İÇİN SELECT VE WHERE İLE KULLANILIR.(İN,AND,OR GİBİ)
+
+Derstte yazdığım kodlar:
+  
+ select * from kitaplik wheret kitap_fiyat between 30 and 40
+ select * from kitaplik where kitap_fiyat<=40 and kitap_fiyat>=30

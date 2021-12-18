@@ -1,0 +1,21 @@
+DML KOMUTLARI:
+1-Select Komutu:
+ Veri tabanındaki verileri seçmek için kullanıcağımız komuttur.Veri seçmek için kullanılır.Kayıtları kod bölümüne getirmeyi sağlar. 
+!!Eğer * kullanırsak bütün alanları seçmek istediğimizi söyleriz yıldız kullanmazsak alanları kendimiz yazariz.
+kullanmı:
+--select * from tablo adı(Yazılan tablo adından tamamını seç anlamına gelir.Bu kod çalıştığında bizim tablomuzdaki kayıtların hepsini penceremize getirir.)                                       
+!!from=ingilizcede -den,-dan anlamına gelir.Nerden seçicez anlamı katar.
+
+--belirli alanları getirmek istersek:
+  select hasta_isim,hasta_soyad from hastalar
+  select ,getirmek istediğimiz sütun isimleri ,from,tablo adı 
+
+Select komutuyla yapılabilicekler:
+1-Sorgulanacak tablonun her sütunu yazılabilir.
+2-Bir veya birden tablo içinde ilişki olmadan da kayıtlar görüntülenebilir.
+3-Mevcut kayıtlar belirli koşul veya şartlara göre getirilebilir.
+
+Derstte yazdığımız kodlar:
+ 
+ select * from hastalar
+ select hasta_isim,hasta_soyad from hastalar

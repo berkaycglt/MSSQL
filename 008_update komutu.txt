@@ -1,0 +1,17 @@
+UPDATE KOMUTU
+
+UPDATE KOMUTU=Tablo içindeki verilerimiz üzerinde güncelleme yapmak için kullanılır.Belirli şartlar gerçekleştiğinde güncelleme işlemi gerçekleşir.
+komutu:
+update tabloadı set alanadı='yenideğer' where şart
+set=değiştir anlamında kullanılır.
+
+!!Oluşturulmuş bir kayıtta güncelleme ekleme yapma işlemlerinde update kullanılır.Alter komutu gibidir.Burada wheri kullanmamızın nedeni hangi kayıdı güncelliceğimizi bulmamızdandır.
+update kitaplik set kitap_adi='berkay' where kitap_no=6  !!burada where'i kullanmamızın nedeni güncelleme işlemi yapıcağımız kitabı belirtmek içindir.
+
+update-tabloadı-set-güncellenmek istenilen değerler-where-güncellenicek kayıtlar
+
+Derstte yazdığım kodlar:
+
+ update kitaplik set kitap_adi='ahmet',kitap_yazari='mehmet' where kitap_no=7
+ select * from kitaplik
+ update kitaplik set kitap_fiyat=4 where  kitap_fiyat<20
